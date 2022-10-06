@@ -3,7 +3,7 @@ Template for theses at Thomas Bata University
 
 ## Usage
 In the begining of the `utb_template.tex` you can see couple of custom properties, you should change all these to correct values.
-Once all properties are set to correct values you can set name of your project in `Makefile` (your .tex name has to be the same as PROJECT variable in makefile)
+Once all properties are set to correct values you can set name of your project in `Makefile` (your .tex and .bib  name has to be the same as PROJECT variable in makefile)
 
 ## Build
 Makefile allows 2 ways how to complete the project.
