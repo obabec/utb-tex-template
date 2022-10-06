@@ -1,0 +1,93 @@
+\documentclass[11pt, a4paper]{article}
+% Remove czech babel for english 
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
+\usepackage{times}
+\usepackage[unicode, hidelinks, pdfpagelabels=false]{hyperref}
+\usepackage{graphicx}
+\usepackage{wrapfig,lipsum}
+
+\graphicspath{ {./images/} }
+
+% Custom properties
+\newcommand\workType{Type of project}
+\newcommand\class{Test class}
+\newcommand\subject{\textbf{Theme or subject of theses}}
+\newcommand\name{Title. Name of student}
+\renewcommand{\refname}{Literatura}
+% Change czplain to enplain for english citations
+\newcommand\bibstylename{czplain}
+
+
+\urlstyle{same}
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{\stretch{0.291}}
+        \LARGE
+        \class{} \\ 
+        \Huge
+        \subject{} \\
+        \vspace{\stretch{0.091}}
+        \LARGE
+        \name{} \\
+        \vspace{\stretch{0.518}}
+
+    \end{center}
+
+    \begin{wrapfigure}{R}{0.5\textwidth}
+        \vspace{-33pt}
+        \begin{center}
+            \includegraphics[width=0.48\textwidth]{fai.eps}
+        \end{center}
+    \end{wrapfigure}
+
+    {{\noindent \Large\workType{}} \\
+    \\
+    \Large\the\year{}}
+
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+\section{Book citation}
+
+\uv{\emph{Typografie je skládání písmen a textu způsobem, který činí dokument čitelný, jasný a vizuálně přitažlivý}}.
+Typografii můžeme chápat jako soubor pravidel, pro práci s~digitálním textem viz \cite{prakt:2000}. Právě dodržování těchto pravidel by nám mělo zajistit typografickou správnost výsledného textu.
+Tyto pravidla ovšem nelze dodržovat bezhlavě. Každý text má svoje specifika a podle těch můžeme volit různá pravidla, kterých se budeme držet, mohli bychom tedy říci, že v~případě typografie vede k~správnému výsledku mnoho správných řešení.
+
+Kromě dodržování typografických pravidel je vhodné při tvorbě dokumentu myslet i na obecné zásady tvorby dokumentu.
+
+Nedílnou součástí typografie je písmo. Právě využití správných fontů a řezů písma může činit text čitelnější a daleko přitažlivější.
+
+\newpage
+
+\section{Web citation}
+Písmo ačkoliv se to nemusí na první pohled zdát, má mnoho částí a vlastností viz \cite{typeface:2008}. Je samozřejmě také nedílnou součástí grafického 
+designu a jsou to právě grafici, kteří nové fonty vytváří. Většina těchto návrhářů vytváří své fonty pro své zákazníky přímo a nebo 
+vytváří fonty, které následně umístí na internetové obchody. Najdou se ovšem i takoví, kteří kromě zakázkové tvorby vytvářejí i písma, které dále publikují k~volnému užití, jako třeba Jonathan Hoefler.
+
+Písma nejsou samozřejmě důležité pouze u~dokumentů, ale hrají obrovskou roli v~reklamě a také webových stránkách. V~těchto případech často slouží k~provokaci, která vyústí k~následnému kliknutí na odkaz, popřípadě jiný textový prvek.
+Zajímavostí u~webových stránek je dělení písem na bezpečná a nebezpečná, kdy bezpečná písma jsou ta, u~kterých odpadá riziko, že je koncový uživatel uvidí jinak, než vývojář, který web vytváří.
+
+\section{Article citation}
+\lipsum[2-3]\cite{olsak:2014}
+
+\newpage
+
+\section{Master theses citation}
+Pro vysvětlení toho, co je to \LaTeX musíme nejprve vědět, co je \TeX. {\TeX} je sázení systém, který narvhnul slavný informatik Donald Knuth v~roce 197. {\LaTeX} je také sázecí systém, stojí nad {\TeX}em a zjednodušuje s~ním interakci ,
+vytvořil jej americký počítačový specialista Leslie Lamport na počátku 80. let. Od doby, kdy byly oba systémy vydány jsou hojně aktualizovány, aby uspokojovali potřeby dnešní doby.
+
+Mnoho lidí bere {\LaTeX} jako velmi nepřátelský sázecí systém, který jim spíše práci stěžuje než urychluje, nicméně opak je pravdou, pokud se začátečník drží správného návodu viz \cite{sirucek:2007}, tak se s~{\LaTeX}em velice rychle sžije a práce se poté mnohonásobně zrychlí.
+
+\newpage
+
+\bibliographystyle{bibstyles/\bibstylename}
+\addcontentsline{toc}{section}{\refname}
+\bibliography{utb_template}
+\end{document}
